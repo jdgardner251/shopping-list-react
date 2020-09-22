@@ -13,7 +13,9 @@ class App extends React.Component {
   };
 
   handleDeleteItem = (item) => {
-    const newItems = this.state.shoppingItems.filter(itm => itm !== item)
+    const newItems = this.state.shoppingItems.filter(itm => itm.name !== item.name)
+    console.log(item)
+    console.log(newItems)
     this.setState({
       shoppingItems: newItems
     })
